@@ -8,23 +8,33 @@ const getConnection = () => {
             let itemHtml = `<div class="container">
             <div class="row">`;
 
-            for (let index = 0; index < json.length; index++) {
-                
-                itemHtml += `
-                <div class="col-sm-6">
-                <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="${json.all_locations[index].img}" alt="${json.all_locations[index].nombre}">
-                <div class="card-body">
-                  <h5 class="card-title">${json.all_locations[index].name}</h5>
-                  <h3 class="card-text">${json.all_locations[index].company}</h3>
-                  <h3 class="card-text">${json.all_locations[index].age}</h3>
-                </div>
-              </div> </div>`
+            for (let index = 0; index < json.all_locations.length; index++) {                
+              itemHtml += `
+              <div class="container">
+              <div class="row align-items-center">
+              <div class="col-lg-6">
+              <div class="p-5">
+             <img class="img-fluid rounded-circle" src="${json.all_locations[index].imagen}" alt="${json.all_locations[index].nombre}">
+              </div>
+            </div>
+            <div class="col-lg-6">
+            <div class="p-5">
+            <h5 class="card-title">${json.all_locations[index].nombre}</h5>
+           <h3 class="card-text">${json.all_locations[index].referencias}</h3>
+            <p class="card-text">${json.all_locations[index].ubicacion}</p>
+        <iframe
+          width="430"
+          height="250"
+          frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB9nQFWYqChXu7UW5lVA2btbBBN47a5SXc
+          &q=place_id:${json.all_locations[index].place_id}" allowfullscreen>
+        </iframe>
+      </div></div></div></div>`
             }
             itemHtml+=`</div> </div>`
     $("#portfolio .container .section-title").after(itemHtml);
         });
-        console.log("Dentro del método getConection")
+        console.log("Dentro de getConection")
     };
     (function () {
         document.addEventListener('DOMContentLoaded', () => {
