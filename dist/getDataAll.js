@@ -4,7 +4,7 @@ const getConnection = () => {
         fetch(URL)
         .then(response => response.json())
         .then(json => {
-            console.log(json)
+            console.log(json.all_locations)
             let itemHtml = `<div class="container">
             <div class="row">`;
 
@@ -13,11 +13,11 @@ const getConnection = () => {
                 itemHtml += `
                 <div class="col-sm-6">
                 <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="${json[index].img}" alt="Card image cap">
+                <img class="card-img-top" src="${json.all_locations[index].img}" alt="${json.all_locations[index].nombre}">
                 <div class="card-body">
-                  <h5 class="card-title">${json[index].name}</h5>
-                  <h3 class="card-text">${json[index].company}</h3>
-                  <h3 class="card-text">${json[index].age}</h3>
+                  <h5 class="card-title">${json.all_locations[index].name}</h5>
+                  <h3 class="card-text">${json.all_locations[index].company}</h3>
+                  <h3 class="card-text">${json.all_locations[index].age}</h3>
                 </div>
               </div> </div>`
             }
