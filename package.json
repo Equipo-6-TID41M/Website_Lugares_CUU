@@ -29,7 +29,7 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-one-page-wonder.git"
     },
     "dependencies": {
-        "bootstrap": "4.5.3",
+        "bootstrap": "^4.5.3",
         "jquery": "3.5.1"
     },
     "devDependencies": {
