@@ -20,8 +20,8 @@ const getConnection = () => {
             <div class="col-lg-6">
             <div class="p-5">
             <h5 class="card-title">${json.all_locations[index].nombre}</h5>
-            <h3 class="card-text">Referencias: ${json.all_locations[index].referencias}</h3>
-            <h3 class="card-text">Teléfono(s): ${json.all_locations[index].telefono}</h3>
+            <h6 class="card-text">Referencias: ${json.all_locations[index].referencias}</h3>
+            <h6 class="card-text">Teléfono(s): ${json.all_locations[index].telefono}</h3>
             <p class="card-text">${json.all_locations[index].descripcion}</p>
         <iframe
           width="430"
